@@ -1,5 +1,5 @@
 const express = require('express');
-var router = express.Router();
+var router = express.router();
 
 var MongoClient = require('mongodb').MongoClient;
 
@@ -89,4 +89,4 @@ router.get("/product/delete", async (req, res) => {
 
 
 
-module. exports = router;
+module.exports = router;
