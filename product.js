@@ -49,23 +49,15 @@ router.get('/product/edit', async(req,res)=>{
     res.render('editproduct',{product:result});
 
 });
-/*
-router.get('/edit', async(req,res)=>{
-    let id = req.query.id;
-    var ObjectID = require('mongodb').ObjectID;
 
-    let client= await MongoClient.connect(url);
-    let dbo = client.db("toystore");
-    let result = await dbo.collection("product").findOne({"_id" : ObjectID(id)});
-    res.render('editDetail',{toy:result});
-*/
+
 ///---------------------------Post edit infomation-----------------------------
 router.post('/product/edit', async(req,res)=>{
     let id = req.body.id;
     let name = req.body.name;
     let type = req.body.type;
     let price = req.body.price;
-    let newValues ={$set: {name: name, type:type, price:price}};
+    let newValues ={ name: name, type:type, price:price};
     var ObjectID = require('mongodb').ObjectID;
     let condition = {"_id" : ObjectID(id)};
     
