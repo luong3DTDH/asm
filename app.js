@@ -17,8 +17,6 @@ app.set('view engine','hbs');
 
 var productController = require('./product.js');
 app.use('/',productController);
-devServer: {
-    historyApiFallback :true
-}
+
 
 var server = app.listen(port, function () {});
