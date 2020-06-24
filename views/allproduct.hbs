@@ -9,7 +9,7 @@
     <title>Document</title>
     <style>
     body {
-    background-image: url("https://i.ytimg.com/vi/1hurVJ8UKwI/maxresdefault.jpg");
+    
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
@@ -18,7 +18,7 @@ header {
     padding: 30px;
     text-align: center;
     font-size: 35px;
-    color: white;
+    color: black;
 }
 article {
     float: center;
@@ -33,7 +33,7 @@ nav {
     width: 100%;
     text-align: center;
     padding: 20px;
-    color: white;
+    color: black;
 }
 </style>
 </head>
@@ -41,13 +41,13 @@ nav {
 <body>
 
     <header>
-        <h1>ATN COMPANY TOY PRODUCT </h1>
+        <h1>TOY PRODUCT </h1>
     </header>
     <article>
         <table width="100%" border="1" style="color:red;">
             <tr>
 
-                <td>ID </td>
+              
                 <td>NAME </td>
                 <td>TYPE </td>
                 <td>PRICE </td>
@@ -56,14 +56,16 @@ nav {
             </tr>
             {{#each product}}
             <tr>
-                <td>{{_id}} </td>
+                
                 <td>{{name}}</td>
                 <td>{{[type]}} </td>
                 <td>{{[price]}}</td>
                 <td><a href="/product/edit?id={{_id}}">Edit</a> </td>
               <td><a href="/product/delete?id={{_id}}">Delete</a></td>
             </tr>
+            
             {{/each}}
+            <button width = "120px"><a href="/product/insert">Add newToy</a> </button>
         </table>
     </article>
 

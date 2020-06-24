@@ -16,10 +16,10 @@ router.get('/', async (req, res) => {
 
 ///---------------------------Insert Toy---------------------------------------
 
-router.get('/insert', (req, res) => {
+router.get('/product/insert', (req, res) => {
     res.render('insert');
 })
-router.post('/insert', async (req, res) => {
+router.post('/product/insert', async (req, res) => {
     let client = await MongoClient.connect(url);
     let dbo = client.db("Product");
     let name = req.body.name;
